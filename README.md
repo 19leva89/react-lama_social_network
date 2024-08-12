@@ -6,7 +6,7 @@ This project contains the following technologies:
 
 Server:
 - Express 4
-- MySQL (relational database)
+- MySQL2 (relational database)
 - Bcrypt (password hashing)
 - JSON Web Token (securely transmitting information)
 - CORS (cross-origin resource sharing)
