@@ -7,6 +7,7 @@ export const getUser = (req, res) => {
 
 	db.query(q, [userId], (err, data) => {
 		if (err) return res.status(500).json(err);
+
 		const { password, ...info } = data[0];
 		return res.json(info);
 	});
@@ -19,8 +20,7 @@ export const updateUser = (req, res) => {
 	jwt.verify(token, "secretkey", (err, userInfo) => {
 		if (err) return res.status(403).json("Token is not valid!");
 
-		const q =
-			"UPDATE users SET `name`=?,`city`=?,`website`=?,`profilePicture`=?,`coverPicture`=? WHERE id=? ";
+		const q = "UPDATE users SET `name`=?,`city`=?,`website`=?,`profilePicture`=?,`coverPicture`=? WHERE id=? ";
 
 		db.query(
 			q,

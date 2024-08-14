@@ -6,6 +6,7 @@ This project contains the following technologies:
 - Moment (date/time manipulation)
 - Sass (stylization)
 - Web Vitals (stylization)
+- Material Icons (stylization)
 
 Server:
 - Express 4

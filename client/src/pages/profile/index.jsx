@@ -8,8 +8,8 @@ import { AuthContext } from "../../context/authContext";
 import Posts from "../../components/posts";
 import Update from "../../components/update";
 
+import XIcon from '@mui/icons-material/X';
 import PlaceIcon from "@mui/icons-material/Place";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LanguageIcon from "@mui/icons-material/Language";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -69,23 +69,23 @@ const Profile = () => {
 					<div className="profileContainer">
 						<div className="uInfo">
 							<div className="left">
-								<a href="http://facebook.com">
+								<a href="https://facebook.com">
 									<FacebookTwoToneIcon fontSize="large" />
 								</a>
 
-								<a href="http://facebook.com">
+								<a href="https://instagram.com">
 									<InstagramIcon fontSize="large" />
 								</a>
 
-								<a href="http://facebook.com">
-									<TwitterIcon fontSize="large" />
+								<a href="https://x.com">
+									<XIcon fontSize="large" />
 								</a>
 
-								<a href="http://facebook.com">
+								<a href="https://www.linkedin.com">
 									<LinkedInIcon fontSize="large" />
 								</a>
 
-								<a href="http://facebook.com">
+								<a href="https://www.pinterest.com">
 									<PinterestIcon fontSize="large" />
 								</a>
 							</div>
@@ -107,7 +107,7 @@ const Profile = () => {
 								{rIsLoading ? (
 									"loading"
 								) : userId === currentUser.id ? (
-									<button onClick={() => setOpenUpdate(true)}>update</button>
+									<button onClick={() => setOpenUpdate(true)}>Update</button>
 								) : (
 									<button onClick={handleFollow}>
 										{relationshipData.includes(currentUser.id)
