@@ -19,17 +19,18 @@ const Stories = () => {
 	return (
 		<div className="stories">
 			<div className="story">
-				<img src={"/upload/" + currentUser.profilePicture} alt="" />
+				<img src={"/upload/" + encodeURIComponent(currentUser.profilePicture)} alt="" />
 				<span>{currentUser.name}</span>
 				<button>+</button>
 			</div>
+
 			{error
 				? "Something went wrong"
 				: isLoading
 					? "loading"
 					: data.map((story) => (
 						<div className="story" key={story.id}>
-							<img src={story.img} alt="" />
+							<img src={"/upload/" + encodeURIComponent(story.img)} alt="" />
 							<span>{story.name}</span>
 						</div>
 					))}

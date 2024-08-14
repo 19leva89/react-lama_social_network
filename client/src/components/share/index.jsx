@@ -30,6 +30,7 @@ const Share = () => {
 	const mutation = useMutation({
 		mutationFn: (newPost) => makeRequest.post("/posts", newPost),
 		onSuccess: () => {
+			// Invalidate and refetch
 			queryClient.invalidateQueries({ queryKey: ["posts"] });
 		},
 	});
@@ -48,10 +49,12 @@ const Share = () => {
 			<div className="container">
 				<div className="top">
 					<div className="left">
-						<img src={"/upload/" + currentUser.profilePicture} alt="" />
+						<img src={"/upload/" + encodeURIComponent(currentUser.profilePicture)} alt="" />
 
 						<input
 							type="text"
+							id="postDescription"
+							name="description"
 							placeholder={`What's on your mind ${currentUser.name}?`}
 							onChange={(e) => setDescription(e.target.value)}
 							value={description}

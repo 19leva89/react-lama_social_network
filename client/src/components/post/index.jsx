@@ -25,6 +25,7 @@ const Post = ({ post }) => {
 		queryKey: ["likes", post.id],
 		queryFn: () => makeRequest.get("/likes?postId=" + post.id).then((res) => res.data),
 	});
+	// console.log("client post data:", data)
 
 	const queryClient = useQueryClient();
 
@@ -34,6 +35,7 @@ const Post = ({ post }) => {
 			return makeRequest.post("/likes", { postId: post.id });
 		},
 		onSuccess: () => {
+			// Invalidate and refetch
 			queryClient.invalidateQueries({ queryKey: ["likes"] });
 		},
 	});
@@ -43,6 +45,7 @@ const Post = ({ post }) => {
 			return makeRequest.delete("/posts/" + postId);
 		},
 		onSuccess: () => {
+			// Invalidate and refetch
 			queryClient.invalidateQueries({ queryKey: ["posts"] });
 		},
 	});
@@ -60,7 +63,7 @@ const Post = ({ post }) => {
 			<div className="container">
 				<div className="user">
 					<div className="userInfo">
-						<img src={"/upload/" + post.profilePicture} alt="" />
+						<img src={"/upload/" + encodeURIComponent(post.profilePicture)} alt="" />
 						<div className="details">
 							<Link
 								to={`/profile/${post.userId}`}
@@ -79,8 +82,8 @@ const Post = ({ post }) => {
 				</div>
 
 				<div className="content">
-					<p>{post.desc}</p>
-					<img src={"/upload/" + post.img} alt="" />
+					<p>{post.description}</p>
+					<img src={"/upload/" + encodeURIComponent(post.img)} alt="" />
 				</div>
 
 				<div className="info">

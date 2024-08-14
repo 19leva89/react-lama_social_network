@@ -37,7 +37,7 @@ const Navbar = () => {
 
 				<div className="search">
 					<SearchOutlinedIcon />
-					<input type="text" placeholder="Search..." />
+					<input type="text" id="search" name="search" placeholder="Search..." />
 				</div>
 			</div>
 

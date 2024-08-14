@@ -40,6 +40,7 @@ const Update = ({ setOpenUpdate, user }) => {
 			return makeRequest.put("/users", user);
 		},
 		onSuccess: () => {
+			// Invalidate and refetch
 			queryClient.invalidateQueries({ queryKey: ["user"] });
 		},
 	});

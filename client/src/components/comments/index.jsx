@@ -23,6 +23,7 @@ const Comments = ({ postId }) => {
 			return makeRequest.post("/comments", newComment);
 		},
 		onSuccess: () => {
+			// Invalidate and refetch
 			queryClient.invalidateQueries({ queryKey: ["comments"] });
 		},
 	});
@@ -36,7 +37,7 @@ const Comments = ({ postId }) => {
 	return (
 		<div className="comments">
 			<div className="write">
-				<img src={"/upload/" + currentUser.profilePicture} alt="" />
+				<img src={"/upload/" + encodeURIComponent(currentUser.profilePicture)} alt="" />
 				<input
 					type="text"
 					placeholder="write a comment"
@@ -50,8 +51,8 @@ const Comments = ({ postId }) => {
 				: isLoading
 					? "loading"
 					: data.map((comment) => (
-						<div className="comment">
-							<img src={"/upload/" + comment.profilePicture} alt="" />
+						<div className="comment" key={comment.id}>
+							<img src={"/upload/" + encodeURIComponent(comment.profilePicture)} alt="" />
 							<div className="info">
 								<span>{comment.name}</span>
 								<p>{comment.description}</p>

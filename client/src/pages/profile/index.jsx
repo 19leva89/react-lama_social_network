@@ -46,6 +46,7 @@ const Profile = () => {
 			return makeRequest.post("/relationships", { userId });
 		},
 		onSuccess: () => {
+			// Invalidate and refetch
 			queryClient.invalidateQueries({ queryKey: ["relationship"] });
 		},
 	});
@@ -61,8 +62,8 @@ const Profile = () => {
 			) : (
 				<>
 					<div className="images">
-						<img src={"/upload/" + data.coverPic} alt="" className="cover" />
-						<img src={"/upload/" + data.profilePic} alt="" className="profilePic" />
+						<img src={"/upload/" + encodeURIComponent(data.coverPicture)} alt="" className="cover" />
+						<img src={"/upload/" + encodeURIComponent(data.profilePicture)} alt="" className="profilePicture" />
 					</div>
 
 					<div className="profileContainer">
