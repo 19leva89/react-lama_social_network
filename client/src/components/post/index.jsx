@@ -13,7 +13,6 @@ import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import "./style.scss";
 
 const Post = ({ post }) => {
 	const [commentOpen, setCommentOpen] = useState(false);
@@ -61,8 +60,8 @@ const Post = ({ post }) => {
 	return (
 		<div className="post">
 			<div className="container">
-				<div className="user">
-					<div className="userInfo">
+				<div className="post__user">
+					<div className="post__user--info">
 						<Link
 							to={`/profile/${post.userId}`}
 							style={{ textDecoration: "none", color: "inherit" }}
@@ -70,14 +69,14 @@ const Post = ({ post }) => {
 							<img src={"/upload/" + encodeURIComponent(post.profilePicture)} alt="" />
 						</Link>
 
-						<div className="details">
+						<div className="post__user--details">
 							<Link
 								to={`/profile/${post.userId}`}
 								style={{ textDecoration: "none", color: "inherit" }}
 							>
-								<span className="name">{post.name}</span>
+								<span className="post__user--name">{post.name}</span>
 							</Link>
-							<span className="date">{moment(post.createdAt).fromNow()}</span>
+							<span className="post__user--date">{moment(post.createdAt).fromNow()}</span>
 						</div>
 					</div>
 
@@ -87,13 +86,13 @@ const Post = ({ post }) => {
 					)}
 				</div>
 
-				<div className="content">
+				<div className="post__content">
 					<p>{post.description}</p>
 					<img src={"/upload/" + encodeURIComponent(post.img)} alt="" />
 				</div>
 
-				<div className="info">
-					<div className="item">
+				<div className="post__info">
+					<div className="post__info--item">
 						{isLoading ? (
 							"loading"
 						) : data.includes(currentUser.id) ? (
@@ -107,12 +106,12 @@ const Post = ({ post }) => {
 						{data?.length} Likes
 					</div>
 
-					<div className="item" onClick={() => setCommentOpen(!commentOpen)}>
+					<div className="post__info--item" onClick={() => setCommentOpen(!commentOpen)}>
 						<TextsmsOutlinedIcon />
 						See Comments
 					</div>
 
-					<div className="item">
+					<div className="post__info--item">
 						<ShareOutlinedIcon />
 						Share
 					</div>

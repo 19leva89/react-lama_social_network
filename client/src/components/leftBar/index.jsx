@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 
 import Friends from "../../assets/1.png";
@@ -15,8 +16,6 @@ import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
 
-import "./style.scss";
-import { Link } from "react-router-dom";
 
 const LeftBar = () => {
 
@@ -31,34 +30,34 @@ const LeftBar = () => {
 						to={`/profile/${currentUser.id}`}
 						style={{ textDecoration: "none", color: "inherit" }}>
 
-						<div className="user">
+						<div className="menu__user">
 							<img src={"/upload/" + encodeURIComponent(currentUser.profilePicture)} alt="" />
 
 							<span>{currentUser.name}</span>
 						</div>
 					</Link>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Friends} alt="" />
 						<span>Friends</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Groups} alt="" />
 						<span>Groups</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Market} alt="" />
 						<span>Marketplace</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Watch} alt="" />
 						<span>Watch</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Memories} alt="" />
 						<span>Memories</span>
 					</div>
@@ -69,27 +68,27 @@ const LeftBar = () => {
 				<div className="menu">
 					<span>Your shortcuts</span>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Events} alt="" />
 						<span>Events</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Gaming} alt="" />
 						<span>Gaming</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Gallery} alt="" />
 						<span>Gallery</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Videos} alt="" />
 						<span>Videos</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Messages} alt="" />
 						<span>Messages</span>
 					</div>
@@ -100,17 +99,17 @@ const LeftBar = () => {
 				<div className="menu">
 					<span>Others</span>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Fund} alt="" />
 						<span>Fundraiser</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Tutorials} alt="" />
 						<span>Tutorials</span>
 					</div>
 
-					<div className="item">
+					<div className="menu__item">
 						<img src={Courses} alt="" />
 						<span>Courses</span>
 					</div>

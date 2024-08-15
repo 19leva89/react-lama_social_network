@@ -3,8 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../context/authContext";
 
-import "./style.scss";
-
 const Login = () => {
 	const [inputs, setInputs] = useState({
 		username: "",

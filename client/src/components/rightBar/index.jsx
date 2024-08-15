@@ -1,5 +1,3 @@
-import "./style.scss";
-
 const RightBar = () => {
 	return (
 		<div className="rightBar">
@@ -8,7 +6,7 @@ const RightBar = () => {
 					<span>Suggestions For You</span>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
@@ -16,14 +14,14 @@ const RightBar = () => {
 							<span>Jane Doe</span>
 						</div>
 
-						<div className="buttons">
+						<div className="user__buttons">
 							<button>follow</button>
 							<button>dismiss</button>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
@@ -31,7 +29,7 @@ const RightBar = () => {
 							<span>Jane Doe</span>
 						</div>
 
-						<div className="buttons">
+						<div className="user__buttons">
 							<button>follow</button>
 							<button>dismiss</button>
 						</div>
@@ -42,7 +40,7 @@ const RightBar = () => {
 					<span>Latest Activities</span>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
@@ -56,7 +54,7 @@ const RightBar = () => {
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
@@ -70,7 +68,7 @@ const RightBar = () => {
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
@@ -85,7 +83,7 @@ const RightBar = () => {
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
@@ -104,141 +102,141 @@ const RightBar = () => {
 					<span>Online Friends</span>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>
 					</div>
 
 					<div className="user">
-						<div className="userInfo">
+						<div className="user__info">
 							<img
 								src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
 								alt=""
 							/>
 
-							<div className="online" />
+							<div className="user__info--online" />
 
 							<span>Jane Doe</span>
 						</div>

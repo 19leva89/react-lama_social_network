@@ -13,15 +13,13 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
-import "./style.scss";
-
 const Navbar = () => {
 	const { toggle, darkMode } = useContext(DarkModeContext);
 	const { currentUser } = useContext(AuthContext);
 
 	return (
 		<div className="navbar">
-			<div className="left">
+			<div className="navbar__left">
 				<Link to="/" style={{ textDecoration: "none" }}>
 					<span>dimasocial</span>
 				</Link>
@@ -41,17 +39,17 @@ const Navbar = () => {
 
 				<GridViewOutlinedIcon />
 
-				<div className="search">
+				<div className="navbar__left--search">
 					<SearchOutlinedIcon />
 					<input type="text" id="search" name="search" placeholder="Search..." />
 				</div>
 			</div>
 
-			<div className="right">
+			<div className="navbar__right">
 				<PersonOutlinedIcon />
 				<EmailOutlinedIcon />
 				<NotificationsOutlinedIcon />
-				<div className="user">
+				<div className="navbar__right--user">
 					<img src={"/upload/" + encodeURIComponent(currentUser.profilePicture)} alt="" />
 					<span>{currentUser.name}</span>
 				</div>

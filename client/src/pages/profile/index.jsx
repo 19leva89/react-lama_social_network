@@ -18,8 +18,6 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
 
-import "./style.scss";
-
 const Profile = () => {
 	const [openUpdate, setOpenUpdate] = useState(false);
 	const { currentUser } = useContext(AuthContext);

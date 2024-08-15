@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+@import './../variables';
 
 .navbar {
 	@include themify($themes) {
@@ -14,7 +14,7 @@
 		color: themed('textColor');
 		z-index: 999;
 
-		.left {
+		&__left {
 			display: flex;
 			align-items: center;
 			gap: 30px;
@@ -25,7 +25,7 @@
 				color: themed('logo');
 			}
 
-			.search {
+			&--search {
 				display: flex;
 				align-items: center;
 				gap: 10px;
@@ -50,7 +50,7 @@
 			}
 		}
 
-		.right {
+		&__right {
 			display: flex;
 			align-items: center;
 			gap: 20px;
@@ -59,7 +59,7 @@
 				display: none;
 			}
 
-			.user {
+			&--user {
 				display: flex;
 				align-items: center;
 				gap: 10px;

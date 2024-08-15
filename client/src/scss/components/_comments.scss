@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+@import './../variables';
 
 .comments {
 	@include themify($themes) {
@@ -40,7 +40,7 @@
 			justify-content: space-between;
 			gap: 20px;
 
-			.info {
+			&__info {
 				flex: 5;
 				display: flex;
 				flex-direction: column;
@@ -56,7 +56,7 @@
 				}
 			}
 
-			.date {
+			&__date {
 				flex: 1;
 				align-self: center;
 				color: gray;

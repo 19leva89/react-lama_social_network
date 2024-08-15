@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+@import './../variables';
 
 .share {
 	@include themify($themes) {
@@ -13,12 +13,12 @@
 		.container {
 			padding: 20px;
 
-			.top {
+			.share__top {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
 
-				.left {
+				&--left {
 					display: flex;
 					align-items: center;
 					flex: 3;
@@ -39,7 +39,7 @@
 					}
 				}
 
-				.right {
+				&--right {
 					flex: 1;
 					display: flex;
 					justify-content: flex-end;
@@ -60,12 +60,12 @@
 				background-color: themed('border');
 			}
 
-			.bottom {
+			.share__bottom {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
 
-				.left {
+				&--left {
 					display: flex;
 					align-items: center;
 					gap: 20px;
@@ -87,7 +87,7 @@
 					}
 				}
 
-				.right {
+				&--right {
 					button {
 						border: none;
 						padding: 5px;

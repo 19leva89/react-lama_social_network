@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+@import './../variables';
 
 .post {
 	@include themify($themes) {
@@ -12,13 +12,13 @@
 		.container {
 			padding: 20px;
 
-			.user {
+			.post__user {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
 				position: relative;
 
-				.userInfo {
+				&--info {
 					display: flex;
 					gap: 20px;
 
@@ -29,15 +29,15 @@
 						object-fit: cover;
 					}
 
-					.details {
+					.post__user--details {
 						display: flex;
 						flex-direction: column;
 
-						.name {
+						.post__user--name {
 							font-weight: 500;
 						}
 
-						.date {
+						.post__user--date {
 							font-size: 12px;
 						}
 					}
@@ -55,7 +55,7 @@
 				}
 			}
 
-			.content {
+			.post__content {
 				margin: 20px 0px;
 
 				img {
@@ -66,12 +66,12 @@
 				}
 			}
 
-			.info {
+			.post__info {
 				display: flex;
 				align-items: center;
 				gap: 20px;
 
-				.item {
+				.post__info--item {
 					display: flex;
 					align-items: center;
 					gap: 10px;

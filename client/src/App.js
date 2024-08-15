@@ -14,7 +14,7 @@ import Navbar from "./components/navbar";
 import LeftBar from "./components/leftBar";
 import RightBar from "./components/rightBar";
 
-import "./styles/main.scss";
+import "./scss/app.scss";
 
 function App() {
 	const { currentUser } = useContext(AuthContext);

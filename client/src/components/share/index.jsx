@@ -6,7 +6,6 @@ import { makeRequest } from "../../axios";
 import Map from "../../assets/map.png";
 import Image from "../../assets/img.png";
 import Friend from "../../assets/friend.png";
-import "./style.scss";
 
 const Share = () => {
 	const [file, setFile] = useState(null);
@@ -47,8 +46,8 @@ const Share = () => {
 	return (
 		<div className="share">
 			<div className="container">
-				<div className="top">
-					<div className="left">
+				<div className="share__top">
+					<div className="share__top--left">
 						<img src={"/upload/" + encodeURIComponent(currentUser.profilePicture)} alt="" />
 
 						<input
@@ -61,7 +60,7 @@ const Share = () => {
 						/>
 					</div>
 
-					<div className="right">
+					<div className="share__top--right">
 						{file && (
 							<img className="file" alt="" src={URL.createObjectURL(file)} />
 						)}
@@ -70,8 +69,8 @@ const Share = () => {
 
 				<hr />
 
-				<div className="bottom">
-					<div className="left">
+				<div className="share__bottom">
+					<div className="share__bottom--left">
 						<input
 							type="file"
 							id="file"
@@ -97,7 +96,7 @@ const Share = () => {
 						</div>
 					</div>
 
-					<div className="right">
+					<div className="share__bottom--right">
 						<button onClick={handleClick}>Share</button>
 					</div>
 				</div>

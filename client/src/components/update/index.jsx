@@ -4,8 +4,6 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { makeRequest } from "../../axios";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
-import "./style.scss";
-
 const Update = ({ setOpenUpdate, user }) => {
 	// console.log("setOpenUpdate:", setOpenUpdate)
 

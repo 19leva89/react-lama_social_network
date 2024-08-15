@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+@import './../variables';
 
 .leftBar {
 	@include themify($themes) {
@@ -37,7 +37,7 @@
 					font-size: 12px;
 				}
 
-				.user {
+				&__user {
 					display: flex;
 					align-items: center;
 					gap: 10px;
@@ -54,7 +54,7 @@
 					}
 				}
 
-				.item {
+				&__item {
 					display: flex;
 					align-items: center;
 					gap: 10px;

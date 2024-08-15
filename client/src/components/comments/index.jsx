@@ -5,8 +5,6 @@ import { makeRequest } from "../../axios";
 import { AuthContext } from "../../context/authContext";
 import moment from "moment";
 
-import "./style.scss";
-
 const Comments = ({ postId }) => {
 	const [description, setDescription] = useState("");
 	const { currentUser } = useContext(AuthContext);
@@ -53,11 +51,11 @@ const Comments = ({ postId }) => {
 					: data.map((comment) => (
 						<div className="comment" key={comment.id}>
 							<img src={"/upload/" + encodeURIComponent(comment.profilePicture)} alt="" />
-							<div className="info">
+							<div className="comment__info">
 								<span>{comment.name}</span>
 								<p>{comment.description}</p>
 							</div>
-							<span className="date">
+							<span className="comment__date">
 								{moment(comment.createdAt).fromNow()}
 							</span>
 						</div>
