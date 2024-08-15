@@ -35,7 +35,7 @@ export const updateUser = (req, res) => {
 			(err, data) => {
 				if (err) res.status(500).json(err);
 				if (data.affectedRows > 0) return res.json("Updated!");
-				return res.status(403).json("You can update only your post!");
+				return res.status(403).json("You can update only your user!");
 			}
 		);
 	});

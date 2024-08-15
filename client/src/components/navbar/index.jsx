@@ -23,10 +23,16 @@ const Navbar = () => {
 		<div className="navbar">
 			<div className="left">
 				<Link to="/" style={{ textDecoration: "none" }}>
-					<span>lamasocial</span>
+					<span>dimasocial</span>
 				</Link>
 
-				<HomeOutlinedIcon />
+				<Link
+					to={`/profile/${currentUser.id}`}
+					style={{ textDecoration: "none", color: "inherit" }}
+				>
+					<HomeOutlinedIcon />
+				</Link>
+
 				{darkMode ? (
 					<WbSunnyOutlinedIcon onClick={toggle} />
 				) : (

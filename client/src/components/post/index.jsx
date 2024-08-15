@@ -63,7 +63,13 @@ const Post = ({ post }) => {
 			<div className="container">
 				<div className="user">
 					<div className="userInfo">
-						<img src={"/upload/" + encodeURIComponent(post.profilePicture)} alt="" />
+						<Link
+							to={`/profile/${post.userId}`}
+							style={{ textDecoration: "none", color: "inherit" }}
+						>
+							<img src={"/upload/" + encodeURIComponent(post.profilePicture)} alt="" />
+						</Link>
+
 						<div className="details">
 							<Link
 								to={`/profile/${post.userId}`}
